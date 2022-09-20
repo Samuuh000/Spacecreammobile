@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-main: 'Staatliches';
+  --ff-second: 'Palanquin';
+  
+  --bgcolor-main: #EFF1FF;
+  --bgcolor-second: #8E9AAF;
+  --bgcolor-third:#FEEAFA;
+
+  font-size: 62.5%; /* Coloquei o font-size para padronizar e usar a medida rem, porém nao esta funcionando.*/
+
+}
+
+
+.page {
+  margin: auto;
+  width: 384px;
+  background: var(--bgcolor-main)
+}
+
+header {
+  background:var(--bgcolor-second);
+  width: 384px;
+  height: 279px;
+  margin-bottom: 14px;
+}
+svg {
+  margin: 32px 124px;
+}
+
+header h1 {
+  font-family: var(--ff-main);
+  font-size: 40px;
+  line-height: 34px;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  background-color: #CBC0D3;
+  padding: 8px 87px;
+  
+}
+
+ main {
+  max-width: 320px;
+  margin: auto;
+ }
+
+ p {
+  font-family: var(--ff-second);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  
+  color: #23053A;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+ }
+
+ .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  padding-bottom: 60px;
+  margin-top: 63px;
+  border-radius: 20px;
+ }
+
+ .card {
+  position: relative;
+ }
+
+.card h2 {
+  position: absolute;
+  top: 16px;
+  left: 192px;
+  right: 16px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  border-radius: 20px;
+  justify-content: space-evenly;
+}
+
+h2 {
+  font-family: var(--ff-main);
+  font-size: 20px;
+  line-height: 34px;
+  letter-spacing: 0.05em;
+  color: #4A4E69;
+  background: var(--bgcolor-third);
+}
+
+h2 {
+  animation: fromTop 1s backwards ;
+}
+
+.cards {
+  animation: fromBottom 500ms backwards;
+}
+
+
+@keyframes fromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
